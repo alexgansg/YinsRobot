@@ -14,28 +14,32 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 1606221784  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "AyiinXd"
-    SUPPORT_CHAT = "AyiinXdSupport"  # Your own group for support, do not add the @
+    ALLOW_CHATS = True
+    API_ID = 8059699  # integer value, dont use ""
+    API_HASH = "9b0d80caf7e8b8f7922a79eba4406a55"
+    TOKEN = "2012034769:AAHI-Zp_kqN6j9ORgQ5qbHjXa7m9yU3K0l8"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 1703479732  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "ygmutebabi"
+    SUPPORT_CHAT = "gabutanguwa"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001432609692
+        -1001626308662
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001150905176
+        -1001626308662
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
+    _DATABASE_URL = postgres://swdbnvoz:ZQUW_SKrWM8s004Dx9oURRokIwyMM8jk@kashin.db.elephantsql.com/swdbnvoz
+    SQLALCHEMY_DATABASE_URI = "postgres://swdbnvoz:ZQUW_SKrWM8s004Dx9oURRokIwyMM8jk@kashin.db.elephantsql.com/swdbnvoz"  # needed for any database modules
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
-    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
+    SPAMWATCH_API = "27WbzbOuMTf3IIWv7WasUopoGLA7ZA06IwQKHB~mbC4baAgmI6tGAjcvzw9D3IKG"  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
+    STRING_SESSION = os.environ.get("STRING_SESSION", None)
+    SESSION_STRING = os.environ.get("SESSION_STRING", None)
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
@@ -67,7 +71,9 @@ class Config(object):
     AI_API_KEY = "awoo"  # For chatbot, get one from https://coffeehouse.intellivoid.net/dashboard
     BL_CHATS = []  # List of groups that you want blacklisted.
     SPAMMERS = None
-
+    HEROKU_API_KEY =
+    HEROKU_APP_NAME =
+    
 
 class Production(Config):
     LOGGER = True
